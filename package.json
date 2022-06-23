@@ -1,5 +1,5 @@
 {
-	"name": "dxf-parser",
+	"name": "bb-dxf-parser",
 	"version": "1.1.2",
 	"description": "Parse dxf files into a readable, logical js object.",
 	"type": "module",
@@ -9,23 +9,18 @@
 		"import": "./esm/index.js",
 		"require": "./commonjs/index.js"
 	},
-	"types": "./esm/index.d.ts",
+	"types": "./dist/types/index.d.ts",
 	"scripts": {
 		"test": "mocha --require @babel/register test",
 		"dev": "tsc -w & webpack --mode development",
 		"prod": "tsc && webpack --mode production",
-		"prepublishOnly": "npm run prod"
+		"prepublishOnly": "npm run prod",
+        "build:types": "tsc -d --declarationDir dist/types --declarationMap --emitDeclarationOnly"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/gdsestimating/dxf-parser.git"
+		"url": "https://github.com/brodyreid/bb-dxf-parser.git"
 	},
-	"bugs": {
-		"url": "https://github.com/gdsestimating/dxf-parser/issues",
-		"email": "bzuillsmith@gmail.com"
-	},
-	"homepage": "https://github.com/gdsestimating/dxf-parser",
-	"author": "GDS Storefront Estimating (gdsestimating.com)",
 	"contributors": [
 		"Ben Zuill-Smith <bzuillsmith@gmail.com>"
 	],
@@ -44,12 +39,6 @@
 	"dependencies": {
 		"loglevel": "^1.7.1"
 	},
-	"keywords": [
-		"dxf",
-		"cad",
-		"parser",
-		"reader"
-	],
 	"files": [
 		"commonjs",
 		"esm",

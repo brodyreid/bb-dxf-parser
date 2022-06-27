@@ -1,3 +1,4 @@
+/// <reference types="node" />
 import { Readable } from 'stream';
 import IGeometry, { IEntity, IPoint } from './entities/geomtry.js';
 export interface IBlock {

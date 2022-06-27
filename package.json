@@ -15,7 +15,7 @@
 		"dev": "tsc -w & webpack --mode development",
 		"prod": "tsc && webpack --mode production",
 		"prepublishOnly": "npm run prod",
-        "build:types": "tsc -d --declarationDir dist/types --declarationMap --emitDeclarationOnly"
+		"build:types": "tsc -d --declarationDir dist/types --declarationMap --emitDeclarationOnly"
 	},
 	"repository": {
 		"type": "git",
@@ -29,6 +29,7 @@
 		"@babel/core": "^7.10.4",
 		"@babel/preset-env": "^7.10.4",
 		"@babel/register": "^7.10.4",
+		"@types/node": "^18.0.0",
 		"approvals": "^3.0.5",
 		"mocha": "^8.0.1",
 		"should": "^13.2.3",
